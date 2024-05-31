@@ -28,7 +28,7 @@
     justify-content: center;
   }
   
-.darkMode span.active{
+.active{
     background-color: var(--color-primary);
     color: white;
     border-radius: var(--border-radius-1);

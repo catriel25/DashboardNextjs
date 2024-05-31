@@ -1,6 +1,5 @@
 'use client'
-import { useRef, useEffect } from "react";
-
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image"
 import styles from './rightNavBar.module.css'
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
@@ -8,50 +7,39 @@ import DarkModeSharpIcon from '@mui/icons-material/DarkModeSharp';
 import LightModeSharpIcon from '@mui/icons-material/LightModeSharp';
 
 export default function RightNavBar () {
-    const menuBtnRef = useRef(null);
-    const darkModeRef = useRef(null);
 
-    useEffect(() => {
+        const [darkModeDetect, setDarkModeDetect] = useState(true)
+
+        
+
+
+
         const handleMenuClick = () => {
-          sideMenuRef.current.style.display = 'block';
+            // Implementa la lógica para manejar el clic en el menú
         };
     
-        const handleCloseClick = () => {
-          sideMenuRef.current.style.display = 'none';
+        const activateDarkMode = () => {
+            document.body.classList.add('dark-mode-variables');
+            setDarkModeDetect(false)
         };
-    
-        const handleDarkModeClick = () => {
-          document.body.classList.toggle('dark-mode-variables');
-          darkModeRef.current.querySelector('span:nth-child(1)').classList.toggle('active');
-          darkModeRef.current.querySelector('span:nth-child(2)').classList.toggle('active');
-        };
-    
-        const menuBtn = menuBtnRef.current;
-        const darkMode = darkModeRef.current;
-    
-        menuBtn.addEventListener('click', handleMenuClick);
-        darkMode.addEventListener('click', handleDarkModeClick);
-    
-        // Cleanup event listeners on unmount
-        return () => {
-          menuBtn.removeEventListener('click', handleMenuClick);
-          darkMode.removeEventListener('click', handleDarkModeClick);
-        };
-      }, []);
+        const activateLightMode = () => {
+            document.body.classList.remove('dark-mode-variables');
+            setDarkModeDetect(true)
+        }
 
     return (
 
     <div className={styles.nav}>
-        <button id="menu-btn" ref={menuBtnRef}>
+        <button id="menu-btn">
             <span>
                 <MenuSharpIcon />
             </span>
         </button>
-        <div className={styles.darkMode} ref={darkModeRef}>
-            <span >
+        <div className={styles.darkMode}>
+            <span onClick={activateLightMode} className={ darkModeDetect ? styles.active : ''}>
                 <LightModeSharpIcon />
             </span>
-            <span>
+            <span onClick={activateDarkMode} className={darkModeDetect ? '' : styles.active }>
                 <DarkModeSharpIcon />
             </span>
         </div>
