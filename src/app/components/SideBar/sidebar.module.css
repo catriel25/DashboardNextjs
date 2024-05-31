@@ -1,0 +1,22 @@
+.toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.toggle .logo{
+    display: flex;
+    gap: 0rem;
+}
+  
+.toggle .logo img{
+    width: 7rem;
+    height: 7rem;
+}
+
+.toggle .close{
+    padding-right: 1rem;
+    display: none;
+}
+
+

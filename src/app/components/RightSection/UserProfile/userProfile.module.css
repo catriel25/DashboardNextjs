@@ -1,0 +1,104 @@
+.userProfile{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+.userProfile:hover{
+    box-shadow: none;
+  }
+  
+.userProfile img{
+    width: 11rem;
+    height: auto;
+    margin-bottom: 0.8rem;
+    border-radius: 50%;
+  }
+  
+.userProfile h2{
+    margin-bottom: 0.2rem;
+  }
+  
+.reminders{
+    margin-top: 2rem;
+  }
+  
+.reminders .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+  
+.reminders .header span{
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-white);
+    border-radius: 50%;
+  }
+  
+.reminders .notification{
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+.reminders .notification:hover{
+    box-shadow: none;
+  }
+  
+.reminders .notification .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+  }
+  
+.reminders .notification .icon{
+    padding: 0.6rem;
+    color: var(--color-white);
+    background-color: var(--color-success);
+    border-radius: 20%;
+    display: flex;
+  }
+  
+.reminders .notification.deactive .icon{
+    background-color: var(--color-danger);
+  }
+  
+.reminders .addReminder{
+    background-color: var(--color-white);
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+.reminders .addReminder:hover{
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+.reminders .addReminder div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  
