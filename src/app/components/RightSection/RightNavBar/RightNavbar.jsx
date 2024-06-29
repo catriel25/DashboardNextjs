@@ -7,17 +7,20 @@ import DarkModeSharpIcon from '@mui/icons-material/DarkModeSharp';
 import LightModeSharpIcon from '@mui/icons-material/LightModeSharp';
 
 export default function RightNavBar () {
-
         const [darkModeDetect, setDarkModeDetect] = useState(true)
-
+        const [sideMenu, setSideMenu] =useState(null);
+        
+        useEffect (() => {
+            setSideMenu(document.querySelector('aside'))
+        }, []);
         
 
-
-
         const handleMenuClick = () => {
-            // Implementa la lógica para manejar el clic en el menú
-        };
-    
+            sideMenu.classList.add('showMenu');
+            
+            
+        }
+
         const activateDarkMode = () => {
             document.body.classList.add('dark-mode-variables');
             setDarkModeDetect(false)
@@ -30,7 +33,7 @@ export default function RightNavBar () {
     return (
 
     <div className={styles.nav}>
-        <button id="menu-btn">
+        <button id="menu-btn" onClick={handleMenuClick}>
             <span>
                 <MenuSharpIcon />
             </span>

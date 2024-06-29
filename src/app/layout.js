@@ -15,9 +15,9 @@ export default function RootLayout({ children }) {
         <div className={styles.container}>
           <SideBar/>
           
-         {children}
+          {children}
 
-         <RightSection />
+          <RightSection />
         
         </div>
       </body>

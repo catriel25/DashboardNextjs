@@ -32,9 +32,9 @@ export default function SideBarLinks() {
             subItem : []
         },
         {
-            title: "History",
+            title: "Ventas",
             icon: <ReceiptLongOutlinedIcon />,
-            link: "#",
+            link: "ventas",
             subItem : []
         },
         {

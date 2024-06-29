@@ -14,9 +14,30 @@
     height: 7rem;
 }
 
-.toggle .close{
-    padding-right: 1rem;
-    display: none;
+
+
+@media screen and (max-width: 768px) {
+
+    .aside{
+        position: fixed;
+        background-color: var(--color-white);
+        width: 15rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        left: -100%;
+        display: none;
+        animation: showMenu 0.4s ease forwards;
+    }
+    .toggle .close{
+        display: block;
+    }
+  
 }
 
+@keyframes showMenu {
+    to{
+     left: 0;
+    } 
+ }
 

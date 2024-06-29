@@ -2,3 +2,12 @@
     margin-top: 1.4rem;
     margin-right: 1.4rem;
 }
+
+@media screen and (max-width: 768px) {
+
+    .rightSection{
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+}

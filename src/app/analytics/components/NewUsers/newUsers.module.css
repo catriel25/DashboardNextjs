@@ -33,3 +33,19 @@
     margin-bottom: 0.4rem;
     border-radius: 50%;
   }
+
+@media screen and (max-width: 1200px) {
+
+  .new-users .user-list .user{
+        flex-basis: 40%;
+    }
+
+  }
+
+@media screen and (max-width: 768px) {
+  
+  main .newUsers .userList .user{
+      flex-basis: 35%;
+  }
+
+}

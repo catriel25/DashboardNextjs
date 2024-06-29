@@ -48,3 +48,45 @@
 .recentOrders .primary {
     color:#6C9BCF;;
   }
+
+
+  @media screen and (max-width: 1200px) {
+
+    .recentOrders {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 0.8rem;
+    }
+  
+    .recentOrders table{
+        width: 83vw;
+    }
+  
+    .table thead tr th:last-child,
+    .table thead tr th:first-child{
+        display: none;
+    }
+  
+    .table tbody tr td:last-child,
+    .table tbody tr td:first-child{
+        display: none;
+    }
+  
+  }
+
+  @media screen and (max-width: 768px) {
+
+
+    .recentOrders{
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+  
+    .recentOrders table{
+        width: 100%;
+        margin: 0;
+    }
+  }  
